@@ -17,4 +17,9 @@ void main() {
 
 //===============================================================
 
-    
+//    While Loop Q3 ( Printing Even Number From 1-50 )
+    int i = 2;
+    while(i<=50){
+        System.out.println(i);
+        i+=2;
+    }
