@@ -36,3 +36,15 @@ void main() {
         i++;
     }
 
+//===============================================================
+
+//    While Loop Q5 ( User Input Multiplication Table )
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    System.out.println("============================");
+    int num = sc.nextInt();
+    int i = 1;
+    while(i<=10){
+        System.out.println(num + " * " + i + " = " + i*num);
+        i++;
+    }
