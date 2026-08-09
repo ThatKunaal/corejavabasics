@@ -23,3 +23,16 @@ void main() {
         System.out.println(i);
         i+=2;
     }
+
+//===============================================================
+
+//    While Loop Q4 ( Printing User Defined Number Series )
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    int target = sc.nextInt();
+    int i=1;
+    while(i <= target ){
+        System.out.println(i);
+        i++;
+    }
+
