@@ -96,4 +96,18 @@ void main() {
         num = num/10;
         count++;
     }
-    System.out.println("Number Of Digits = " + count);    
+    System.out.println("Number Of Digits = " + count);
+
+//===============================================================
+
+//    While Loop Q9 ( Reverse a Number )
+    Scanner sc = new Scanner(System.in);
+    long rev = 0;
+    System.out.print("Enter Your Number To Reverse : ");
+    long num = sc.nextLong();
+    while (num > 0) {
+        long digit = num % 10;
+        rev = rev * 10 + digit;
+        num = num / 10;
+    }
+    System.out.print("Reverse = " + rev);    
