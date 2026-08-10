@@ -84,3 +84,16 @@ void main() {
         i--;
     }
     System.out.print(" = "+fact);    
+
+//===============================================================
+
+//    While Loop Q8 ( Counting Digit In A Number )
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    int count = 0;
+    while(num>0){
+        num = num/10;
+        count++;
+    }
+    System.out.println("Number Of Digits = " + count);    
