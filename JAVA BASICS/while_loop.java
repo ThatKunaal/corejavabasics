@@ -166,3 +166,37 @@ void main() {
    }
    System.out.println("Even Count = "+even_count);
    System.out.println("Odd Count = "+odd_count);
+
+//===============================================================
+
+//    While Loop Q13 ( Finding Smallest Digit In A Number )
+   Scanner sc = new Scanner(System.in);
+   System.out.println("Enter A Number : ");
+   long num = sc.nextLong();
+   long smallest = num%10;
+   while(num>0){
+       long digit = num%10;
+       if (digit<smallest){
+           smallest = digit;
+       }
+       num = num/10;
+   }
+   System.out.println(smallest);
+
+//===============================================================
+
+//    While Loop  Q14 ( Finding Largest Digit In A Number )
+   Scanner sc = new Scanner(System.in);
+   System.out.println("Enter Your Number : ");
+   long num = sc.nextLong();
+   long largest = 0;
+
+   while (num>0){
+       long digit = num%10;
+
+       if (digit>largest){
+           largest = digit;
+       }
+       num = num/10;
+   }
+   System.out.println("Largest Digit Is : "+largest);
