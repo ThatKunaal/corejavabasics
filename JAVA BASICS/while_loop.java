@@ -200,3 +200,69 @@ void main() {
        num = num/10;
    }
    System.out.println("Largest Digit Is : "+largest);
+
+//===============================================================
+
+//    While Loop Q15 ( Finding The Second-Largest Digit )
+   Scanner sc = new Scanner(System.in);
+   System.out.print("Enter Your Number : ");
+   long num = sc.nextLong();
+   long largest = 0,second_largest = 0;
+
+   while(num>0){
+       long digit = num%10;
+       if (digit>largest){
+           second_largest = largest;
+           largest = digit;
+       } else if (digit>second_largest) {
+           second_largest = digit;
+       }
+       num = num/10;
+   }
+   System.out.println("Second Largest Is : "+second_largest);
+
+//===============================================================
+
+//    While Loop Q16 ( Finding Frequency Of A Digit In A Number )
+   Scanner sc = new Scanner(System.in);
+   System.out.print("Enter Your Number : ");
+   long num = sc.nextLong();
+   System.out.print("Enter Digit To Find Frequency : ");
+   long dig = sc.nextLong();
+   long digit,count=0;
+   while (num>0){
+       digit = num%10;
+
+       if (digit==dig){
+           count++;
+       }
+
+       num = num/10;
+   }
+   System.out.println("Number Of "+dig+"'s In This Number Is : "+count);
+
+//===============================================================
+
+//    While Loop Q17 ( Finding Frequency Of The Largest Number In A Number )
+   Scanner sc = new Scanner(System.in);
+   System.out.print("Enter Your Number : ");
+   long num = sc.nextLong();
+   long og  = num;
+   long largest = 0,dig,count=0;
+   while(num>0){
+       dig = num%10;
+       if(dig > largest){
+           largest = dig;
+       }
+       num = num/10;
+   }
+
+   while(og>0){
+       long digit = og%10;
+       if (digit==largest){
+           count++;
+       }
+       og = og/10;
+   }
+   System.out.println("Largest Digit Is : "+largest);
+   System.out.println("Frequency of Largest No. Is : "+count);
