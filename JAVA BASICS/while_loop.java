@@ -300,3 +300,29 @@ void main() {
     }
     System.out.println("Sum Of Even Index Digit Is : "+sum);
     
+//===============================================================
+
+//    While Loop Q19 ( Finding Sum Of Even And Odd Digits In A Number )
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long even_sum = 0, even_count = 0, odd_sum = 0,odd_count = 0, digit, count=0;
+
+    while (num>0){
+        digit = num%10;
+        if (digit%2==0){
+            even_count++;
+            even_sum = even_sum + digit;
+        }else {
+            odd_count++;
+            odd_sum = odd_sum + digit;
+        }
+        num = num/10;
+        count++;
+    }
+    System.out.println("Total Number Of Odd Digits : "+odd_count);
+    System.out.println("Total Sum Of Odd Digits : "+odd_sum);
+    System.out.println("Total Number Of Even Digits : "+even_count);
+    System.out.println("Total Sum Of Even Digits : "+even_sum);
+    System.out.println("Total Number Of Digits : "+count);
+
