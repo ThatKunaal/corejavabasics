@@ -250,7 +250,7 @@ void main() {
    long og  = num;
    long largest = 0,dig,count=0;
    while(num>0){
-       dig = num%10;
+       dig = num%10; 
        if(dig > largest){
            largest = dig;
        }
@@ -266,3 +266,37 @@ void main() {
    }
    System.out.println("Largest Digit Is : "+largest);
    System.out.println("Frequency of Largest No. Is : "+count);
+
+//===============================================================
+
+//    While Loop Q18 ( Finding Sum Of Digits At Even Place In Num )
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter Your Number : ");
+    long num = sc.nextLong();
+    long og = num;
+    long sum = 0,count=0;
+
+    while(num>0){
+        num = num/10;
+        count++;
+    }
+
+    if (count%2==0){
+        while(og>0){    //1234 { Even Number Of Digit Case }
+            long digit = og%100;
+            long digit2 = digit%10;
+            System.out.println(" "+digit2);
+            sum = sum+digit2;
+            og = og/100;
+        }
+    }else{
+        while(og>0){   //12345 { Odd Number Of Digit Case }
+            long digit = og%100;
+            long digit2 = digit/10;
+            System.out.println(" "+digit2);
+            sum = sum+digit2;
+            og = og/100;
+        }
+    }
+    System.out.println("Sum Of Even Index Digit Is : "+sum);
+    
