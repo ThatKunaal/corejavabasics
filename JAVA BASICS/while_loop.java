@@ -326,3 +326,17 @@ void main() {
     System.out.println("Total Sum Of Even Digits : "+even_sum);
     System.out.println("Total Number Of Digits : "+count);
 
+//===============================================================
+
+//    While Loop Q20 ( Product Of All Digits In A Number )
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter Your Number : ");
+    long num = sc.nextLong();
+    long prod = 1, digit;
+
+    while(num>0){
+        digit = num%10;
+        prod = prod*digit;
+        num = num/10;
+    }
+    System.out.println("Product Is : "+prod);
