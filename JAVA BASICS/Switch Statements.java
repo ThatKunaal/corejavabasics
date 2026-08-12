@@ -10,3 +10,24 @@ void main() {
     System.out.print("CHOOSE THE COURSE YOU WANT TO PURSUE : ");
     int choice = sc.nextInt();
     System.out.println();
+    switch (choice){
+
+        case 1:
+            System.out.println("==============================\n" +
+                    "Course : B.Tech (Computer Science)\n" +
+                    "\n" +
+                    "Duration : 4 Years\n" +
+                    "\n" +
+                    "Total Fees : ₹6,80,000\n" +
+                    "\n" +
+                    "Eligibility :\n" +
+                    "• 10+2 (PCM)\n" +
+                    "• Minimum 60% Marks\n" +
+                    "\n" +
+                    "Seats Available : 120\n" +
+                    "\n" +
+                    "Admission Status : Open\n" +
+                    "==============================");
+
+           
+}
