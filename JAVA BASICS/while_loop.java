@@ -362,3 +362,23 @@ void main() {
     System.out.println("HCF Is : "+hcf);
 
 //===============================================================
+
+//    While Loop Q23 ( Finding Whether A Number Is Perfect )
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    int i = 1,fact_sum=0,y=1;
+    System.out.print("Factors Are : ");
+    while(i<num){
+        if (num%i==0){
+            System.out.print(" "+i);
+            fact_sum=fact_sum+i;
+        }
+        i++;
+    }
+    System.out.println();
+    if (fact_sum==num){
+        System.out.println("Perfect Number");
+    }else {
+        System.out.println("Not A Perfect Number");
+    }
