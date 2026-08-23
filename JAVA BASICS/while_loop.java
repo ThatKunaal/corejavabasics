@@ -340,3 +340,25 @@ void main() {
         num = num/10;
     }
     System.out.println("Product Is : "+prod);
+
+//===============================================================
+
+//    While Loop Q22 ( Finding HCF Of The Two Given Number )
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your First Number : ");
+    long num1 = sc.nextLong();
+    System.out.print("Enter Your Second Number : ");
+    long num2 = sc.nextLong();
+    int i=1, hcf=1;
+    System.out.print("Common Factors Are : ");
+    while (i<=num1 || i<=num2){
+        if (num1%i==0 && num2%i==0){
+            hcf = i;
+            System.out.print(" "+i);
+        }
+        i++;
+    }
+    System.out.println();
+    System.out.println("HCF Is : "+hcf);
+
+//===============================================================
