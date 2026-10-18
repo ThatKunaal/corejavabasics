@@ -73,4 +73,19 @@ void main() {
     }while (num>0);
     System.out.println(fact);
 
+//    ========================================================================
+
+//    Printing Table Of A Given Number
+    Scanner sc = new Scanner(System.in);
+    System.out.println("====[ Table Printer ]====");
+    System.out.print("Enter Your Number To Print : ");
+    long num = sc.nextLong();
+    long i=1,mult;
+    do {
+        mult = num*i;
+        System.out.println(num+" * "+i+" = "+mult);
+        i++;
+    }while (i<=10);
+
+
 }
