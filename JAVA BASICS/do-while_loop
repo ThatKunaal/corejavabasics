@@ -27,4 +27,18 @@ void main() {
     }while (num>0);
     System.out.print(rev);
 
+//    =========================================================================
+
+//    Printing Sum Of All The Digits In A Number
+    Scanner  sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long sum = 0;
+    do {
+        long digit = num%10;
+        sum = sum + digit;
+        num = num/10;
+    }while (num>0);
+    System.out.println(sum+" Is The Sum Of Digits Of Given Number");
+
 }
