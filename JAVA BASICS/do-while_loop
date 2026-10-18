@@ -87,5 +87,19 @@ void main() {
         i++;
     }while (i<=10);
 
+//    =========================================================================
+
+//    Counting Number Of Digits In A Given Number
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long count=0;
+    do {
+        long digit = num%10;
+        num = num/10;
+        count++;
+    }while (num>0);
+    System.out.println(count);
+
 
 }
