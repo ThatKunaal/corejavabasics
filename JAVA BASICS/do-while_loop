@@ -60,4 +60,17 @@ void main() {
     System.out.println("Total Number Of Even Numbers : "+even_count);
     System.out.println("Total Number Of Odd Numbers : "+odd_count);
 
+//    ========================================================================
+
+//    Finding Factorial Of A Number
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long i=1,fact=1;
+    do {
+        fact = fact*num;
+        num--;
+    }while (num>0);
+    System.out.println(fact);
+
 }
