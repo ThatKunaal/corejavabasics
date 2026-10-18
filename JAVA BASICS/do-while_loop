@@ -12,3 +12,19 @@ void main() {
         System.out.println(i);
         i++;
     }while (i<=num);
+
+//    =========================================================================
+//
+//    Printing Reverse Of A Given Number
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long rev = 0;
+    do {
+        long digit = num%10;
+        rev = rev*10+digit;
+        num = num/10;
+    }while (num>0);
+    System.out.print(rev);
+
+}
