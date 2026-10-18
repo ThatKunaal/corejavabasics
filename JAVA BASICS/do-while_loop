@@ -41,4 +41,23 @@ void main() {
     }while (num>0);
     System.out.println(sum+" Is The Sum Of Digits Of Given Number");
 
+//    ==========================================================================
+
+//    Counting Number Of Even And Odd Digits In A Number
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long even_count=0, odd_count=0;
+    do {
+        long digit = num%10;
+        if (digit%2 == 0){
+            even_count++;
+        }else {
+            odd_count++;
+        }
+        num = num/10;
+    }while (num>0);
+    System.out.println("Total Number Of Even Numbers : "+even_count);
+    System.out.println("Total Number Of Odd Numbers : "+odd_count);
+
 }
