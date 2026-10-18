@@ -382,3 +382,92 @@ void main() {
     }else {
         System.out.println("Not A Perfect Number");
     }
+
+
+//==============================================================
+
+//    While Loop Q24 ( Finding Second Smallest Digit In A Number )
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+
+    long digit;
+    long smallest_digit = 9;
+    long second_smallest = 9;
+
+    while (num > 0) {
+
+        digit = num % 10;
+
+        if (digit < smallest_digit) {
+            second_smallest = smallest_digit;
+            smallest_digit = digit;
+        }
+        else if (digit > smallest_digit && digit < second_smallest) {
+            second_smallest = digit;
+        }
+
+        num = num / 10;
+    }
+
+    if (second_smallest == 9) {
+        System.out.println("Second Smallest Distinct Digit Does Not Exist");
+    } else {
+        System.out.println("Smallest Digit = " + smallest_digit);
+        System.out.println("Second Smallest Digit = " + second_smallest);
+    }
+
+//==============================================================
+
+//    While Loop Q25 ( Delete Duplicate Digits In A Number )
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long processed = 0;
+
+    while (num > 0) {
+        long digit = num % 10;
+        long temp = processed;
+        boolean alreadyFound = false;
+
+        while (temp > 0) {
+            long previousDigit = temp % 10;
+            if (digit == previousDigit) {
+                alreadyFound = true;
+                break;
+            }
+            temp = temp / 10;
+        }
+
+        if (!alreadyFound) {
+
+            // Frequency count
+            long frequency = 0;
+            long check = num;
+
+            while (check > 0) {
+
+                long checkDigit = check % 10;
+
+                if (digit == checkDigit) {
+                    frequency++;
+                }
+
+                check = check / 10;
+            }
+
+            System.out.println(
+                    "Count Of " + digit + " Is " + frequency
+            );
+        }
+
+        // Current digit ko processed mein save karo
+        processed = processed * 10 + digit;
+
+        // Next digit
+        num = num / 10;
+    }
+
+}
