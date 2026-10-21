@@ -179,5 +179,46 @@ void main() {
         System.out.println("Not A Strong Number");
     }
 
+//    =======================================================================
+
+//    Check Automorphic Number
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long og = num;
+    long num_square = num*num, count = 0, pow_count;
+    do {
+        num = num/10;
+        count++;
+    }while(num>0);
+
+    long divisor = (long) Math.pow(10,count);
+    long digit2 = num_square%divisor;
+
+    if (og == digit2){
+        System.out.println("Automorphic");
+    }else {
+        System.out.println("Not Automorphic");
+    }
+
+//    =====================================================================
+
+//    Target Number Frequency Counter
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    System.out.print("Enter Your Target Number : ");
+    long target = sc.nextLong();
+    long digit, count = 0;
+    do {
+        digit = num%10;
+        if (digit == target){
+            count++;
+        }
+        num = num/10;
+    }while (num>0);
+
+    System.out.println("Frequency Of "+target+" Is "+count);
+
 
 }
