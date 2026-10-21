@@ -1,14 +1,22 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 void main(){
-    listOfOperations();
-    long choice = choiceInput();
-    operationsInAction(choice);
+    menuDrivenProgram();
+}
 
+// [ Menu Driven Program Caller ]
+public void menuDrivenProgram(){
+    long choice;
+    do {
+        listOfOperations();
+        choice = choiceInput();
+        operationsInAction(choice);
+    }while(choice!=0);
 }
 
 // [ List Of Operations We Can Perform By This Software ]
 public void listOfOperations(){
+    System.out.println();
+    System.out.println("====================================");
     System.out.println("=======[ List Of Operations ]=======");
     System.out.println("1-Multiplication Table");
     System.out.println("2-Even Odd Number Checker");
@@ -17,6 +25,7 @@ public void listOfOperations(){
     System.out.println("5-Factorial Calculator");
     System.out.println("6-Prime Number Checker");
     System.out.println("7-Palindrome Number Checker");
+    System.out.println("0-Exit");
     System.out.println("====================================");
 }
 
@@ -47,6 +56,8 @@ public void operationsInAction(long choice){
     } else if (choice==7) {
         long num = oneInput();
         palindromeChecker(num);
+    } else if (choice==0) {
+        System.out.println("!! Thankyou For Using This Calculator !!");
     }
 }
 
@@ -127,7 +138,7 @@ public void findMaxOf3(long n1, long n2, long n3){
     } else if (n2>n1 && n2>n3) {
         System.out.println(n2+" Is Greater Than "+n1+" & "+n3);
     } else if (n3>n1 && n3>n2) {
-        System.out.println(n3+" Is Greater Than "+n1+" & "+n3);
+        System.out.println(n3+" Is Greater Than "+n1+" & "+n2);
     }else {
         System.out.println("All Three Numbers Are Equal");
     }
@@ -162,12 +173,17 @@ public void factorialCalculator(long num){
 public void primeChecker(long num){
     boolean isPrime = true;
 
-    for (int i=2; i<=num-1; i++){
-        if (num%i == 0){
-            isPrime = false;
+    if (num<2){
+        isPrime=false;
+    }else {
+        for (int i=2; i<=num-1; i++){
+            if (num%i == 0){
+                isPrime = false;
+            }
         }
     }
-    if (isPrime){
+
+    if (isPrime) {
         System.out.println("!! Number Is Prime !!");
     }else {
         System.out.println("!! Number Is Not Prime !!");
