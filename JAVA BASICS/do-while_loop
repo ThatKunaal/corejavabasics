@@ -101,5 +101,83 @@ void main() {
     }while (num>0);
     System.out.println(count);
 
+//    ========================================================================= Pushed To Github !!
+
+//    Checking Palindrome Number
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long og = num;
+    long rev=0;
+    do {
+        long digit = num%10;
+        rev = rev*10+digit;
+        num = num/10;
+    }while (num>0);
+    System.out.println("Reverse Of The Number is : " +rev);
+
+    if (og == rev){
+        System.out.println("Its A Palindrome Number");
+    }else {
+        System.out.println("Its Not A Palindrome Number");
+    }
+
+//    ==========================================================================
+
+//    Checking Armstrong Number
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long og1 = num;
+    long og2 = num, sum = 0;
+    long count = 0;
+    do {
+        long digit = num%10;
+        num = num/10;
+        count++;
+    }while (num>0);
+
+    do {
+        long digit = og1%10;
+        long cube = (long) Math.pow(digit,count);
+        sum = sum+cube;
+        og1 = og1/10;
+    }while (og1>0);
+
+    if (sum == og2){
+        System.out.println("Armstrong Number");
+    }else {
+        System.out.println("Not An Armstrong Number");
+    }
+
+//    =======================================================================
+
+////    Checking Strong Number
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number To Check : ");
+    long num = sc.nextLong();
+    long og = num;
+    long sum = 0;
+    do {
+        long fact = 1;
+        long digit1 = num%10;
+
+//      ====={ Loop For Factorial }=====
+        do {
+            fact = fact*digit1;
+            digit1--;
+        }while (digit1>0);
+//      ================================
+
+        sum = sum + fact;
+        num = num/10;
+    }while (num>0);
+
+    if (sum == og){
+        System.out.println("Strong Number");
+    }else {
+        System.out.println("Not A Strong Number");
+    }
+
 
 }
