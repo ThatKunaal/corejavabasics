@@ -220,5 +220,91 @@ void main() {
 
     System.out.println("Frequency Of "+target+" Is "+count);
 
+//    ======================================================================
+
+//    Finding The Largest Number
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long og = num;
+    long digit,largest_num;
+    largest_num = num%10;
+    do {
+        digit = og%10;
+        if (digit>largest_num){
+            largest_num = digit;
+        }
+        og = og/10;
+    }while(og>0);
+    System.out.println(largest_num+" Is The Largest Digit");
+
+//    ========================================================================
+
+//    Finding The Smallest Number
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long smallest_digit = num%10,digit;
+    do {
+        digit = num%10;
+        if (digit<smallest_digit){
+            smallest_digit = digit;
+        }
+        num = num/10;
+    }while(num>0);
+    System.out.println(smallest_digit);
+
+//    ========================================================================
+
+//    Counting Number Of Zeros In A Number
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long count=0, digit;
+    do {
+        digit = num%10;
+        if (digit == 0){
+            count++;
+        }
+        num = num/10;
+    }while(num>0);
+    System.out.println("Number Of Zeros : "+count);
+
+//    ======================================================================
+
+//    Sum Of Even Position Digits
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Your Number : ");
+    long num = sc.nextLong();
+    long count = 1, count2 = 0, count1 = 0, og = num,digit,sum = 0;
+
+    do {
+        og = og/10;
+        count1++;
+    }while (og>0);
+
+    if (count1%2 == 0){
+        do {
+            digit = num%10;
+
+            if (count2%2==0){
+                sum = sum + digit;
+            }
+            num = num/10;
+            count2++;
+        }while (num>0);
+    }else {
+        do {
+            digit = num%10;
+
+            if (count%2==0){
+                sum = sum + digit;
+            }
+            num = num/10;
+            count++;
+        }while (num>0);
+    }
+
+    System.out.println(sum);
 
 }
