@@ -109,4 +109,26 @@ void main() {
         System.out.println("Your Number Was Not Found In This Array !!");
     }
 
+//  ===========================================================
+
+//  Q5) Finding Largest Number In An Array
+   int[] arr = {12, 45, 7, 89, 34, 89, 21};
+   int index = 0, digit;
+   int largest_digit = arr[index], frequency = 0;
+
+   while(index < arr.length){
+       digit = arr[index];
+       if (digit>largest_digit){
+           largest_digit = digit;
+           frequency=1;
+       }else if (digit==largest_digit){
+           frequency++;
+       }
+       index++;
+   }
+
+   System.out.println("Largest Digit In This Array Is : "+largest_digit);
+   System.out.println("Frequency Of Largest Digit Is : "+frequency);
+}
+
 
