@@ -38,3 +38,18 @@ void main() {
    System.out.println("===============");
    System.out.println("The Length Of The Second Row Is : "+myArr[1].length);
 
+//  ================================================================================
+
+//    Q2) Printing 2D Array Using Traversal Method
+    int[][] myArr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int i = 0;
+    while(i < myArr.length){
+        int j = 0;
+        while (j < myArr[i].length){
+            System.out.print(myArr[i][j]+"  ");
+            j++;
+        }
+        i++;
+        System.out.println();
+    }  
+}
