@@ -131,4 +131,93 @@ void main() {
    System.out.println("Frequency Of Largest Digit Is : "+frequency);
 }
 
+//  ===========================================================
+
+//  Q6) Find The Second Largest Number In An Array
+    int[] arr = {12, 45, 7, 89, 34, 89, 21};
+    int index = 0;
+    int largest_digit = arr[0], digit, second_largest = 0;
+
+    while(index< arr.length){
+        digit = arr[index];
+        if (digit > largest_digit){
+            second_largest = largest_digit;
+            largest_digit = digit;
+        }else if(digit > second_largest && digit < largest_digit) {
+            second_largest = digit;
+        }
+        index++;
+    }
+    System.out.println("Second Largest Digit In This Array Is : "+second_largest);
+
+//  ===========================================================
+
+//    Q7) Find Sum And Average Of The Elements Of An Array
+    int[] arr = {12, 25, 8, 15, 40, 10};
+    int i = 0, sum = 0;
+    while(i < arr.length){
+        sum = sum + arr[i];
+        i++;
+    }
+
+    float avg = (float) (sum)/arr.length;
+
+    System.out.println("Sum Of The Array is : "+sum);
+    System.out.println("Average Of The Array is : "+avg);
+
+//  ============================================================
+
+//    Q8) Count The Frequency Of Target Element
+    int[] arr = {4, 7, 2, 7, 9, 7, 3, 2, 7, 5};
+    int i = 0, frequency = 0, target = 7;
+    while(i < arr.length){
+        if (arr[i]==target){
+            frequency++;
+        }
+        i++;
+    }
+    System.out.println("Frequency Of The Target Digit = "+frequency);
+
+//  ============================================================
+
+//    Q9) Finding Maximum And Minimum Number In An Array
+    int[] arr = {34, 12, 89, 5, 67, 23, 91, 8};
+    int i = 0, maxNum = arr[0], minNum = arr[0];
+    while(i < arr.length){
+        if (arr[i] > maxNum){
+            maxNum = arr[i];
+        }
+
+        if (arr[i] < minNum){
+            minNum = arr[i];
+        }
+        i++;
+    }
+    System.out.println("Largest Element = "+maxNum);
+    System.out.println("Smallest Element = "+minNum);
+
+//  ===========================================================
+
+//    Q10) Checking Wether An Array Is Shorted Or Not
+    int[] arr = {3, 7, 12, 18, 26, 31, 46};
+    boolean asc = true, desc = true;
+    int i = 1;
+    while(i < arr.length){
+        if (arr[i-1] < arr[i]) {
+            desc = false;
+
+        } else if (arr[i-1] > arr[i]) {
+            asc = false;
+
+        }
+        i++;
+    }
+    if (asc){
+        System.out.println("Array Is Sorted In Ascending Order");
+    }else if(desc) {
+        System.out.println("Array Is Sorted In Descending Order");
+    }else {
+        System.out.println("Array Is Not Sorted");
+    }
+
 
