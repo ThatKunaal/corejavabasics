@@ -221,5 +221,59 @@ void main() {
     }
 }
 
+// =============================================================
 
+// Q5 Delete A Given Number From An Array And Display The New Array
+void main(){
+    Scanner sc = new Scanner(System.in);
+    int[] arr5 = utilityScanner();
+    System.out.print("Enter The Element To Delete : ");
+    int digit = sc.nextInt();
+
+    int count = occurrenceFinding(arr5, digit);
+    System.out.print("Your New Array Is : ");
+    int[] arrNew = deleteNumber(arr5, digit, count);
+    displayArr(arrNew);
+}
+
+// Counts The Number Of Occurrences Of The Number To Be Deleted From The Array :
+public static int occurrenceFinding(int[] arr5, int digit){
+    int i = 0,count = 0;
+    while(i < arr5.length){
+        if (arr5[i]==digit){
+            count++;
+        }
+        i++;
+    }
+    return count;
+}
+
+// Deletes The Desired Number From The Array
+public static int[] deleteNumber(int[] arr5, int digit, int count){
+//  Generating New Array (arrNew)
+    int size = arr5.length;
+    int[] arrNew = new int[size - count];
+
+//  Deleting The Number From The Old Array (arr5)
+    int i = 0,j = 0;
+    while(i < arr5.length){
+        if (arr5[i] != digit){
+            arrNew[j] =  arr5[i];
+            j++;
+        }
+        i++;
+    }
+
+//  Return The New Array
+    return arrNew;
+}
+
+// Displays The New Array
+public static void displayArr(int[] arrNew){
+    int i = 0;
+    while(i < arrNew.length){
+        System.out.print(arrNew[i]+" ");
+        i++;
+    }
+}
 
