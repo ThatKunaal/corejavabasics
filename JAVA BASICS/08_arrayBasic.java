@@ -363,3 +363,29 @@ public static boolean palindromeCheck(int[] arrRev, int[] arr7){
     }
     return isPalindrome;
 }
+
+//----------------------------------------
+//--------{ Second Method }--------
+void main(){
+    int[] arr7 = utilityScanner();
+
+    boolean isPalindrome = palindromeChecker(arr7);
+    if (isPalindrome){
+        System.out.println("This Array Is A Palindrome Array");
+    }else {
+        System.out.println("This Array Is Not A Palindrome Array");
+    }
+}
+
+// Palindrome Checker
+public static boolean palindromeChecker(int[] arr7){
+    int i = arr7.length-1, j = 0;
+    while(i > 0){
+        if (arr7[i]!=arr7[j]){
+            return false;
+        }
+        i--;
+        j++;
+    }
+    return true;
+}
