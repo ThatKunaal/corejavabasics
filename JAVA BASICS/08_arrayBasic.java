@@ -277,3 +277,37 @@ public static void displayArr(int[] arrNew){
     }
 }
 
+// =============================================================
+
+// Q6 Reverse An Array And Display
+void main(){
+    System.out.println("=== Reversing An Array ===");
+
+    int[] arr6 = utilityScanner();
+
+    System.out.print("Reverse Of The Array Is : ");
+    int[] revArr = revArr(arr6);
+    displayArr(revArr);
+}
+
+// Reversing The Array
+public static int[] revArr(int[] arr6){
+    int[] revArr = new int[arr6.length];
+    int i = arr6.length-1,j = 0;
+    while(i >= 0){
+        revArr[j] = arr6[i];
+        i--;
+        j++;
+    }
+
+    return revArr;
+}
+
+// Display The Reversed Array
+public static void displayArr(int[] revArr){
+    int i = 0;
+    while(i < revArr.length){
+        System.out.print(revArr[i]+" ");
+        i++;
+    }
+}
