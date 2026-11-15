@@ -311,3 +311,55 @@ public static void displayArr(int[] revArr){
         i++;
     }
 }
+
+// =============================================================
+
+// Q7 Checking An Array Is Palindrome Or Not
+//--------{ First Method }--------
+void main(){
+    int[] arr7 = utilityScanner();
+
+    int[] revArr = revArr(arr7);
+//    displayArr(revArr);
+
+    boolean isPalindrome = palindromeCheck(revArr, arr7);
+    if (isPalindrome){
+        System.out.println("This Array Is A Palindrome Array");
+    }else {
+        System.out.println("This Array Is Not A Palindrome Array");
+    }
+}
+
+// Reverses And Return The Reversed Array
+public static int[] revArr(int[] arr7){
+    int[] arrRev = new int[arr7.length];
+    int i = arr7.length-1,j = 0;
+    while(i >= 0){
+        arrRev[j] = arr7[i];
+        i--;
+        j++;
+    }
+    return arrRev;
+}
+
+/ Display Reversed Array
+public static void displayArr(int[] arrRev){
+    int i = 0;
+    while(i < arrRev.length){
+        System.out.print(arrRev[i]+" ");
+        i++;
+    }
+}
+
+// Checking Palindrome Array
+public static boolean palindromeCheck(int[] arrRev, int[] arr7){
+    boolean isPalindrome = true;
+    int i = 0;
+    while(i < arrRev.length){
+        if (arrRev[i] != arr7[i]){
+            isPalindrome = false;
+        }
+        i++;
+    }
+    return isPalindrome;
+}
