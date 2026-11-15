@@ -427,3 +427,66 @@ public static void displayArr(int[] mergeArr){
         i++;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public static int[] utilityScanner(){
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter Number Of Elements You Want To Insert In Array : ");
+    int size = sc.nextInt();
+    int[] nums = new int[size];
+
+    int i = 0;
+    while(i < size){
+        System.out.print("Enter Element "+(i+1)+" : ");
+        nums[i] = sc.nextInt();
+        i++;
+    }
+    return nums;
+}
