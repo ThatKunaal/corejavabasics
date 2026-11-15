@@ -389,3 +389,41 @@ public static boolean palindromeChecker(int[] arr7){
     }
     return true;
 }
+
+// =============================================================
+
+// Q8 Merging Two Arrays
+void main(){
+    int[] arr8 = utilityScanner();
+    int[] arr8_1 = utilityScanner();
+
+    int[] mergeArr = arrayMerger(arr8, arr8_1);
+    displayArr(mergeArr);
+}
+
+//Merging Two Arrays
+public static int[] arrayMerger(int[] arr8, int[] arr8_1){
+    int[] mergedArr = new int[arr8.length+arr8_1.length];
+    int i = 0, j = 0;
+    while(i < arr8.length){
+        mergedArr[i] = arr8[i];
+        i++;
+    }
+
+    while(j < arr8_1.length){
+        mergedArr[i] = arr8_1[j];
+        i++;
+        j++;
+    }
+
+    return mergedArr;
+}
+
+// Displays The Merged Array
+public static void displayArr(int[] mergeArr){
+    int i = 0;
+    while(i < mergeArr.length){
+        System.out.print(mergeArr[i]+ " ");
+        i++;
+    }
+}
